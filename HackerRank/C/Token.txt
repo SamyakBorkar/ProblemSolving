@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+int main() {
+    char *s;
+    s = malloc(1024 * sizeof(char));
+    if (s == NULL) {
+        fprintf(stderr, "Memory allocation failed\n");
+        return 1;
+    }
+    scanf("%[^\n]", s);
+    s = realloc(s, strlen(s) + 1);
+    if (s == NULL) {
+        fprintf(stderr, "Memory reallocation failed\n");
+        return 1;
+    }
+
+    char *word = strtok(s, " ");
+    while (word != NULL) {
+        printf("%s\n", word);
+        word = strtok(NULL, " ");
+    }
+
+    free(s);
+    return 0;
+}
