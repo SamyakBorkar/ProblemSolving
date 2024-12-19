@@ -19,7 +19,7 @@ public:
 };
 
 int main(){
-    //[8,4,6,2,3], [1,2,3,4,5], [10,1,1,6]
+    //[8,4,6,2,3], [1,2,3,4,5], [10,1,1,6] 
     Solution obj;
     vector<int>input={10,1,1,6};
     vector<int>res=obj.finalPrices(input);
