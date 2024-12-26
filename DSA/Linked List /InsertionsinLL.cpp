@@ -25,6 +25,11 @@ void insertAtTail(Node* &tail, int data){
     tail=tail->next;
 }
 
+void printAtPosition(Node* &head, Node* &tail, int position, int data){
+    if(position<1) return;
+    
+
+}
 void printLL(Node* &head){
     Node* temp=head;
     while(temp!=NULL){
