@@ -13,6 +13,9 @@ public:
         generateSubsets(nums, res, temp, index + 1);
         // Exclude current element
         temp.pop_back();
+        while(index<nums.size() && nums[index]==nums[index+1]){
+            index++;
+        }
         generateSubsets(nums, res, temp, index + 1);
     }
 
@@ -26,7 +29,7 @@ public:
 
 int main(){
     Solution obj;
-    vector<int> arr = {1, 2, 3};
+    vector<int> arr = {1, 2, 2};
     vector<vector<int>> res = obj.subsets(arr);
     for (const auto& subset : res) {
         cout << "[";
