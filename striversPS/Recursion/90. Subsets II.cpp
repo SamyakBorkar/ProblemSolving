@@ -14,7 +14,7 @@ public:
         // Exclude current element
         temp.pop_back();
         while(index<nums.size() && nums[index]==nums[index+1]){
-            index++;
+            index++;        
         }
         generateSubsets(nums, res, temp, index + 1);
     }
