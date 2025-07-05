@@ -66,4 +66,6 @@ int main()
     Stack st(5);
     st.push(100);
     st.push(500);
+    st.pop();
+    st.peek();
 }
