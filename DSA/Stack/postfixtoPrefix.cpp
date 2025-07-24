@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+string postfixToPrefix(string s){
+    stack<string>st;
+    string res="";
+    for(char c : s){
+        if((c >='a' && c<='z') || (c >='A' && c<='Z') || (c >='0' && c<='9')){
+            st.push(string(1, c));
+        }
+        else{
+            string x = st.top(); st.pop();
+            string y = st.top(); st.pop();
+            string temp = c + y + x;
+            st.push(temp);
+        }
+    }
+    while(!st.empty()){
+        res+=st.top();
+        st.pop();
+    }
+    return res;
+}
+int main(){
+    string s = "ABC/-AK/L-*";
+    string res = postfixToPrefix(s);
+    cout<<res; //*-A/BC-/AKL
+    return 0;
+}
