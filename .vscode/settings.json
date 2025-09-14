@@ -91,6 +91,8 @@
         "stdexcept": "cpp",
         "stdfloat": "cpp",
         "typeindex": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "generator": "cpp",
+        "text_encoding": "cpp"
     }
 }
