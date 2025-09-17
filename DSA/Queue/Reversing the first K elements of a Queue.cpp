@@ -22,6 +22,10 @@ class Solution {
 
   public:
     queue<int> reverseFirstK(queue<int> q, int k) {
+        int n = q.size();
+        if(k>n){
+            return q;
+        }
         moveToEnd(q, k);
         
         int t = q.size()-k;
